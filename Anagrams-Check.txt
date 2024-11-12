@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Check_Anagrams
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter a string one :");
+            string s1=Console.ReadLine();
+            Console.WriteLine("Enter a string two :");
+            string s2 = Console.ReadLine();
+
+            char[] a1=s1.ToLower().ToCharArray();
+            char[] a2=s2.ToLower().ToCharArray();
+
+            Array.Sort(a1);
+            Array.Sort(a2);
+
+            string result1=new string(a1);
+            string result2=new string(a2);
+
+
+            if (result1==result2)
+            {
+                Console.WriteLine("Given strings are anagrams");
+            }
+            else
+            {
+                Console.WriteLine("given strings are not anagrams");
+            }
+        }
+    }
+}
